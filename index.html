@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recetas Deliciosas</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+
+  <style>
+  #recetasCarousel {
+    max-width: 25%;
+    margin: 0 auto;
+  }
+
+  #recetasCarousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+</style>
+
+  </style>
+</head>
+<body>
+  <header class="bg-dark text-white text-center py-5">
+    <img src="imagenes/recipes.png" alt="Recipes" style="max-width: 150px; display: block; margin: 0 auto;" class="mb-4"/>
+    <h1 class="display-4">Recetas Deliciosas</h1>
+  </header>
+
+  <!-- Carrusel de recetas con imágenes pequeñas -->
+  <div class="container mt-4 mb-5">
+    <div id="recetasCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagenes/comida-caliente-1.jpg" class="d-block w-100 carousel-img-small" alt="Comida caliente">
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/comida-fria-1.jpg" class="d-block w-100 carousel-img-small" alt="Comida fría">
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/postre-1.jpg" class="d-block w-100 carousel-img-small" alt="Postre">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#recetasCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#recetasCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="comidas-calientes.html">Comidas Calientes</a></li>
+        <li class="nav-item"><a class="nav-link" href="comidas-frias.html">Comidas Frías</a></li>
+        <li class="nav-item"><a class="nav-link" href="postres.html">Postres</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Tarjetas de recetas -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Bienvenido a Recetas Deliciosas</h2>
+    <p class="text-center lead">Descubre nuestras recetas organizadas por tipo de comida y disfruta cocinando.</p>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="imagenes/comida-caliente-1.jpg" class="card-img-top" alt="Comidas Calientes"/>
+          <div class="card-body">
+            <h5 class="card-title">Comidas Calientes</h5>
+            <p class="card-text">Encuentra las mejores recetas de comidas calientes para cualquier ocasión.</p>
+            <a href="comidas-calientes.html" class="btn btn-primary">Ver recetas</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="imagenes/comida-fria-1.jpg" class="card-img-top" alt="Comidas Frías"/>
+          <div class="card-body">
+            <h5 class="card-title">Comidas Frías</h5>
+            <p class="card-text">Descubre una variedad de recetas frescas y deliciosas para el verano.</p>
+            <a href="comidas-frias.html" class="btn btn-primary">Ver recetas</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="imagenes/postre-1.jpg" class="card-img-top" alt="Postres"/>
+          <div class="card-body">
+            <h5 class="card-title">Postres</h5>
+            <p class="card-text">Endulza tu día con nuestras recetas de postres irresistibles.</p>
+            <a href="postres.html" class="btn btn-primary">Ver recetas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-4">
+    <h5>Acerca de esta página</h5>
+    <p>Esta es una página de recetas donde encontrarás diversas opciones para tus comidas.</p>
+    <div>
+      <a href="#" class="text-white mr-3">Facebook</a>
+      <a href="#" class="text-white mr-3">Twitter</a>
+      <a href="#" class="text-white">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- Formulario de contacto -->
+  <div class="container my-5">
+    <h2 class="text-center">Contáctanos</h2>
+    <form action="process_contact.php" method="post">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" class="form-control" id="name" name="name" required/>
+      </div>
+      <div class="form-group">
+        <label for="phone">Teléfono:</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required/>
+      </div>
+      <div class="form-group">
+        <label for="recipe_type">Tipo de Recetas que te gustaría recibir:</label>
+        <select class="form-control" id="recipe_type" name="recipe_type" required>
+          <option value="calientes">Comidas Calientes</option>
+          <option value="frias">Comidas Frías</option>
+          <option value="postres">Postres</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
